@@ -136,8 +136,5 @@
       }
     }
   },
-  "defaultProject": "farm-frontend",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "farm-frontend"
 }
