@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import gettext as _
 
-from farm_back.farm_base.models import Owner, Farm
+from farm_base.models import Owner, Farm
 
 admin.site.site_header = _("Farm Project - Administration")
 admin.site.site_title = _("Farm Project - Site Administration")

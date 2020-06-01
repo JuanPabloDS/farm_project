@@ -6,7 +6,6 @@
 
  - Python 3.5
  - Virtual Enviroment
- - Postgres 
  - Django
  
 ## RUN
@@ -34,10 +33,10 @@ Inside the project directory, run the command to install the env requirements:
 $ pip3 install -r requirements.txt
 ```
 
-### Install PostgreSQL and PostGIS
+### Install Spatialite
 
 ```shell
-$ sudo apt-get install postgresql-client
+$ sudo apt-get install libsqlite3-mod-spatialite
 ```
 
 ### Install GDAL development libraries:
@@ -51,37 +50,6 @@ sudo apt-get install libgdal-dev
 sudo apt-get install python3-dev
 sudo apt-get install gdal-bin python3-gdal
 pip install GDAL==$(gdal-config --version) --global-option=build_ext --global-option="-I/usr/include/gdal"
-```
-
-Create a local database name 'farm-project' in the postgres with your user and password.
-
-Inside the farm-project folder create a new file called *local_settings.py*:
-```shell
-$ touch farm_project/local_settings.py
-```
-
-Inside the file *local_settings.py* configure your database, bellow is a template:
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'farm-project',
-        'USER': 'your-user',
-        'PASSWORD': 'your-password',
-        'HOST': 'localhost',
-    }
-}
-
-DEBUG =  True
-```
-
-
-Create extensions:
-
-```
-$ psql -U your-user -W -h localhost farm-project
-
-$ CREATE EXTENSION postgis;
 ```
 
 Run the migrations:
