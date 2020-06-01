@@ -3,8 +3,8 @@ from osgeo import ogr
 from rest_framework import serializers
 from rest_framework_gis.fields import GeometryField
 
-from farm_back.farm_base.api.v1.serializers.owner import OwnerDetailSerializer
-from farm_back.farm_base.models import Farm
+from farm_base.api.v1.serializers.owner import OwnerDetailSerializer
+from farm_base.models import Farm
 
 
 class FarmListSerializer(serializers.ModelSerializer):

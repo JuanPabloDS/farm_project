@@ -1,8 +1,8 @@
 import re
 from rest_framework import serializers
 
-from farm_back.farm_base.api.v1.validators import cpf_validator, cnpj_validator
-from farm_back.farm_base.models import Owner
+from farm_base.api.v1.validators import cpf_validator, cnpj_validator
+from farm_base.models import Owner
 
 
 class OwnerListCreateSerializer(serializers.ModelSerializer):

@@ -1,8 +1,8 @@
 from rest_framework import generics
 
-from farm_back.farm_base.api.v1.serializers import FarmListSerializer, \
+from farm_base.api.v1.serializers import FarmListSerializer, \
     FarmCreateSerializer, FarmDetailSerializer
-from farm_back.farm_base.models import Farm
+from farm_base.models import Farm
 
 
 class FarmListCreateView(generics.ListCreateAPIView):

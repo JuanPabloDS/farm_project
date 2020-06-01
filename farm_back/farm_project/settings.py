@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.postgres',
     'django.contrib.humanize',
     'django.contrib.gis',
     'django_filters',
@@ -80,11 +79,11 @@ WSGI_APPLICATION = 'farm_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'farm_project',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'ENGINE': 'django.contrib.gis.db.backends.spatialite',
+        'NAME': 'farm_back',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
     }
 }
 

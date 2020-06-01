@@ -1,7 +1,7 @@
 from django_filters import FilterSet, filters
 
-from farm_back.farm_base.api.v1.filters.fields import NumberInFilter
-from farm_back.farm_base.models import Owner
+from farm_base.api.v1.filters.fields import NumberInFilter
+from farm_base.models import Owner
 
 
 class OwnerFilter(FilterSet):
