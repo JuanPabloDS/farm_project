@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4db80f62-ef46-49fc-80ae-6e0182149a91" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cXQaOagXHuUxdoFhHW8klXTqat" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/farm_base/api/v1" />
+      <recent name="$PROJECT_DIR$/farm/api/v1" />
+      <recent name="$PROJECT_DIR$/farm/api" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="farm_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../simfaz-backend/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="farm_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4db80f62-ef46-49fc-80ae-6e0182149a91" name="Default Changelist" comment="" />
+      <created>1590672520808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590672520808</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="338" y="78" width="732" height="637" key="#Inspections" timestamp="1590673194971">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="338" y="78" width="732" height="637" key="#Inspections/53.27.1313.741/1366.0.1920.1080@53.27.1313.741" timestamp="1590673194971" />
+    <state x="579" y="265" width="251" height="263" key="#Notifications" timestamp="1590680199035">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="579" y="265" width="251" height="263" key="#Notifications/53.27.1313.741/1366.0.1920.1080@53.27.1313.741" timestamp="1590680199035" />
+    <state x="167" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590680698971">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="167" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/53.27.1313.741/1366.0.1920.1080@53.27.1313.741" timestamp="1590680698971" />
+    <state x="442" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590779532821">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="442" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/53.27.1313.741/1366.0.1920.1080@53.27.1313.741" timestamp="1590779532821" />
+    <state x="549" y="138" width="309" height="516" key="EnvironmentVariablesDialog" timestamp="1590680258459">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="549" y="138" width="309" height="516" key="EnvironmentVariablesDialog/53.27.1313.741/1366.0.1920.1080@53.27.1313.741" timestamp="1590680258459" />
+    <state x="492" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1590687854191">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="492" y="154" width="424" height="484" key="FileChooserDialogImpl/53.27.1313.741/1366.0.1920.1080@53.27.1313.741" timestamp="1590687854191" />
+    <state x="399" y="136" width="618" height="570" key="find.popup" timestamp="1591038451985">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="399" y="136" width="618" height="570" key="find.popup/53.27.1313.741/1366.0.1920.1080@53.27.1313.741" timestamp="1591038451985" />
+    <state x="372" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1590676294336">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="372" y="89" width="672" height="678" key="search.everywhere.popup/53.27.1313.741/1366.0.1920.1080@53.27.1313.741" timestamp="1590676294336" />
+  </component>
+</project>
