@@ -70,33 +70,35 @@ Look the swagger accessing *http://localhost:8000*
 Look the django-admin accessing *http://localhost:8000/admin* and use your superuser email and password.
 
 --- 
+
 # Complete the Farm Project
-#####1. Add in the FARM model the following fields:
+
+1. Add the following fields to the FARM model:
 - Municipality
 - State
-- A relation between FARM and OWNER (one farm has to have only one owner and the onwer can have zero or many farms).
+- A relation between FARM and OWNER (one farm needs to have one and only one owner. The owner can have zero or many farms).
 
-#####2. Do not allow create farms:
-- Without Owner
-- Without Geometry
-- Without Municipality
-- Without State
-- Without Name
+2. Add restrictions so that it is not possible to create farms:
+- Without owner
+- Without geometry
+- Without municipality
+- Without state
+- Without name
 
-#####3. Allow search farm by:
-- Owner name
-- Owner document
-- Farm name
+3. Make it possible to search a farm by:
+- The owner's name
+- The owner's document number/identification
+- The farm's name
 - Municipality 
 - State 
-- ID
+- The ID of the farm.
 
-#####4. The GET (details) of FARM has to return:
+4. Edit the GET (details) of FARM so that it returns:
 - All fields of the model
 
-#####5. The GET (list) of FARM has to return:
+5. Edit the GET (list) of FARM so that it returns:
 - Name, owner id, centroid, area, municipality and state
 
 ## Hints
-1. To test your code you can use the swagger to make the requests
-2. To test geometry fields you can pass a geojson data, this can be create on *[http://geojson.io/](http://geojson.io/)*  (using just the geometry field in the geojson).
+1. To test your code you can use the swagger to make requests
+2. To test geometry fields you can pass geojson data. You can create geojson data on *[http://geojson.io/](http://geojson.io/)*  (using just the geometry field in the geojson).
