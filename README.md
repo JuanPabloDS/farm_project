@@ -1,3 +1,27 @@
+# How to apply for a Developer position
+
+This project is a development test that illustrate a little of what we work with at Agrosatélite.
+If you are interested in applying for a position, first download the project and do as documented in the Readme files.
+
+* If you are applying for a **Front-end** developer position (**Analista Desenvolvedor Front-End**) , you can build both the front and the back-ends and focus on the frontend. There might be some itens that require completing the back-end, no it might not be possíble to complete all that is asked. But if you are up for a little challenge, you can go ahead and take a chance with the back-end. It will be a nice way to differentiate yourself from other candidates.
+* If you are applying for a **Back-end** developer position (**Analista Desenvolvedor Back-End**), the same ideia applies. You can focus on the back, but it will be OK if you try completing the front-end.
+* If you have arrived here because of a position published only as **developer** (**Analista Desenvolvedor**), them we spect you do develop both the back-end and the front-end of this project.
+
+Once you are ready to submit your project, send an e-mail for
+_**agrosatelite@agrosatelite.com.br**_
+
+* **Fill the subject as** (depending on how which position you are applying for):
+    * Analista Desenvolvedor Front-end
+    * Analista Desenvolvedor Back-end
+    * Analista Desenvolvedor
+
+
+* On the **body of the e-mail** or its **attachments**, send:
+    * your **curriculum/CV** together with
+    * a **link through which we can download you implementation** of this test.
+	    * It can be a google drive link for a .zip file, for example, 
+        * or you can upload in your own public git repository and send us the link.
+
 # Farm Project 
 
 The **Farm Project** is incomplete. But you can help us fixing that.
