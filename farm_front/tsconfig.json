@@ -20,6 +20,7 @@
     ],
     "strict": true,
     "noImplicitAny": false,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

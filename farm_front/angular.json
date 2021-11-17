@@ -29,8 +29,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -136,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "farm-frontend"
+  "defaultProject": "farm-frontend",
+  "cli": {
+    "analytics": "d4748ce4-1aaf-4144-a721-3f7a26531297"
+  }
 }

@@ -1,22 +1,19 @@
-import Map from 'ol/Map'
-import StyleFunction from 'ol'
+import { dashedInteractionStyle, formatArea } from '@common/geolib'
+import { circular as circularPolygon } from 'node_modules/ol/geom/Polygon.js'
 import GeometryType from 'ol/geom'
-import Interaction from 'ol/interaction'
-import VectorLayer from 'ol/layer/Vector'
-import VectorSource from 'ol/source/Vector'
-import Draw from 'ol/interaction/Draw'
 import Geometry from 'ol/geom/Geometry'
 import Polygon from 'ol/geom/Polygon'
-import { circular as circularPolygon } from 'node_modules/ol/geom/Polygon.js'
+import Draw from 'ol/interaction/Draw'
+import VectorLayer from 'ol/layer/Vector'
+import Map from 'ol/Map'
 import Overlay from 'ol/Overlay'
-import _flatMap from 'lodash/flatMap'
+import VectorSource from 'ol/source/Vector'
 import { MapAddon } from './addon'
-import { dashedInteractionStyle, formatArea } from '@common/geolib'
 
 export class DrawAddon extends MapAddon {
   source: VectorSource
   layer: VectorLayer
-  interaction: Interaction
+  interaction: ol.interaction.Interaction
   event: any
   overlay: Overlay
 
@@ -34,10 +31,8 @@ export class DrawAddon extends MapAddon {
     private input: {
       identifier: string
       drawType: GeometryType
-      callback: (
-        geometry: Geometry
-      ) => any
-      styleFunction?: StyleFunction
+      callback: (geometry: Geometry) => any
+      styleFunction?: ol.StyleFunction
       geometries?: any[]
     }
   ) {

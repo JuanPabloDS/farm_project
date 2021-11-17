@@ -1,23 +1,21 @@
-import { MapAddon } from './addon'
-import VectorLayer from 'ol/layer/Vector'
-import VectorSource from 'ol/source/Vector'
-import { Projection, GeoJsonSchema } from '@common/geolib'
-import { StyleFunction, Feature } from 'ol'
-import OlProjection from 'ol/proj/Projection'
+import { GeoJsonSchema, Projection } from '@common/geolib'
 import GeoJSON from 'ol/format/GeoJSON'
-
+import VectorLayer from 'ol/layer/Vector'
+import OlProjection from 'ol/proj/Projection'
+import VectorSource from 'ol/source/Vector'
+import { MapAddon } from './addon'
 
 export interface FeatureAddonOpts<Input> {
   identifier: string
   feature: Input
-  styleFunction?: StyleFunction
+  styleFunction?: ol.StyleFunction
   dataProjection?: Projection
 }
 
-export class FeatureAddon<Input = Feature[]> extends MapAddon {
+export class FeatureAddon<Input = ol.Feature[]> extends MapAddon {
   source: VectorSource
   layer: VectorLayer
-  olFeatures: Feature[]
+  olFeatures: ol.Feature[]
 
   constructor(public input: FeatureAddonOpts<Input>) {
     super(input.identifier)
@@ -30,7 +28,7 @@ export class FeatureAddon<Input = Feature[]> extends MapAddon {
     })
   }
 
-  getOlFeatures(input: Input): Feature[] {
+  getOlFeatures(input: Input): ol.Feature[] {
     return input as any
   }
 
@@ -40,7 +38,7 @@ export class FeatureAddon<Input = Feature[]> extends MapAddon {
 
   getExtent = () => {
     const out = this.olFeatures
-      .map(feature => {
+      .map((feature) => {
         return feature.getGeometry().getExtent()
       })
       .reduce(

@@ -1,31 +1,28 @@
-import { Component, ViewChild, ElementRef, ViewEncapsulation, Input } from '@angular/core';
-import Map from 'ol/Map'
-import View from 'ol/View'
-import Tile from 'ol/layer/Tile'
-import XYZ from 'ol/source/XYZ'
-import Layer from 'ol/layer'
-import { MapService } from '../map.service';
-import _throttle from 'lodash/throttle'
+import { Component, ElementRef, Input, ViewChild, ViewEncapsulation } from '@angular/core'
 import { MapAddon } from '@common/addon'
-import _equal from 'lodash/isEqual'
-import _debounce from 'lodash/debounce'
 import _diff from 'lodash/difference'
-import _values from 'lodash/values'
-import _pick from 'lodash/pickBy'
 import _omit from 'lodash/omit'
+import _pick from 'lodash/pickBy'
+import _values from 'lodash/values'
 import { easeOut } from 'ol/easing.js'
+import Layer from 'ol/layer'
+import Tile from 'ol/layer/Tile'
+import Map from 'ol/Map'
+import XYZ from 'ol/source/XYZ'
+import View from 'ol/View'
+import { MapService } from '../map.service'
 
 const DEFAULTS = {
   center: [-6500000, -1700000] as [number, number],
   resolution: 4900,
   minZoom: 4,
-  maxZoom: 17
+  maxZoom: 17,
 }
 
 @Component({
   selector: 'app-basemap',
-  template: `<div style='height: 100vh' #mapContainer></div>`,
-  encapsulation: ViewEncapsulation.None
+  template: `<div style="height: 100vh" #mapContainer></div>`,
+  encapsulation: ViewEncapsulation.None,
 })
 export class BasemapComponent {
   @ViewChild('mapContainer') private $mapContainer!: ElementRef
@@ -126,14 +123,14 @@ export class BasemapComponent {
     await Promise.all(
       toRemove.map(async (a) => {
         await a!.waitRemout
-        a!.unmount(this._map, this)
+        a!.unmount(this._map)
       })
     )
     for (let x = 0; x < toAdd.length; x++) {
       const addon = toAdd[x]!
       addon._hasInit = addon.asyncInit()
       await addon._hasInit
-      if (mountOnInclude && this._map) addon.mount(this._map, this)
+      if (mountOnInclude && this._map) addon.mount(this._map)
     }
   }
 
@@ -180,13 +177,11 @@ export class BasemapComponent {
   private getInitialLayers(): Layer[] {
     const rasterLayer = new Tile({
       source: new XYZ({
-        url:
-          'https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}&apistyle=s.t%3A1%7Cp.v%3Aon%2Cs.t%3A21%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A2%7Cp.v%3Aoff%2Cs.t%3A2%7Cs.e%3Al.t%7Cp.v%3Aoff%2Cs.t%3A33%7Cp.v%3Aoff%2Cs.t%3A33%7Cs.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A3%7Cs.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A51%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A4%7Cp.v%3Aoff',
+        url: 'https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}&apistyle=s.t%3A1%7Cp.v%3Aon%2Cs.t%3A21%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A2%7Cp.v%3Aoff%2Cs.t%3A2%7Cs.e%3Al.t%7Cp.v%3Aoff%2Cs.t%3A33%7Cp.v%3Aoff%2Cs.t%3A33%7Cs.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A3%7Cs.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A51%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A4%7Cp.v%3Aoff',
         crossOrigin: 'Anonymous',
       }),
     })
     this._initialLayers = [rasterLayer]
     return this._initialLayers
   }
-
 }

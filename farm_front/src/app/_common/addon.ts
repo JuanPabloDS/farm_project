@@ -1,9 +1,6 @@
 import { ExternalPromise } from '@common/external-promise'
-import Map from 'ol/Map'
-import Extent from 'ol/extent'
 import Layer from 'ol/layer'
-import Control from 'ol/control'
-import Interaction from 'ol/interaction'
+import Map from 'ol/Map'
 import Overlay from 'ol/Overlay'
 
 export class MapAddon {
@@ -15,10 +12,10 @@ export class MapAddon {
   getLayers(): (Layer & { _order?: number })[] {
     return []
   }
-  getControls(): Control[] {
+  getControls(): ol.control.Control[] {
     return []
   }
-  getInteractions(): Interaction[] {
+  getInteractions(): ol.interaction.Interaction[] {
     return []
   }
   getOverlays(): Overlay[] {
@@ -88,5 +85,5 @@ export class MapAddon {
     this._remounting = false
   }
 
-  getExtent?: () => Extent
+  getExtent?: () => ol.Extent
 }
