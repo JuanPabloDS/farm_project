@@ -25,7 +25,7 @@ Upgrade pip and setuptools
 
 ```shell
 $ pip3 install --upgrade pip
-$ pip3 install setuptools --upgrade
+$ pip3 install setuptools==57.5.0
 ```
 
 Inside the project directory, run the command to install the env requirements:
@@ -102,3 +102,4 @@ Look the django-admin accessing *http://localhost:8000/admin* and use your super
 ## Hints
 1. To test your code you can use the swagger to make requests
 2. To test geometry fields you can pass geojson data. You can create geojson data on *[http://geojson.io/](http://geojson.io/)*  (using just the geometry field in the geojson).
+
