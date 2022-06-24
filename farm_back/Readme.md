@@ -4,9 +4,7 @@
 
 ## Requirements
 
- - Python 3.5
- - Virtual Enviroment
- - Django
+ - Python 3.8
  
 ## RUN
 
@@ -15,47 +13,70 @@ First, clone the repository:
 $ git clone https://bitbucket.org/agrosatelite/farm-project.git
 ```
 
-After, you need to create your virtual enviroment. You can create using Virtualenv (apt install virtualenv):
+After, install python development package:
+
+Ubuntu.
 ```shell
-$ virtualenv env -p python3
-$ source env/bin/activate
+$ sudo apt-get install python-dev
 ```
 
-Upgrade pip and setuptools
-
+Fedora.
 ```shell
-$ pip3 install --upgrade pip
-$ pip3 install setuptools==57.5.0
+$ sudo dnf install python3-devel
 ```
 
-Inside the project directory, run the command to install the env requirements:
+Inside the project directory, you need to create your virtual enviroment and active it:
 ```shell
-$ pip3 install -r requirements.txt
+$ python -m venv pyenv
+$ source pyenv/bin/activate
 ```
 
-### Install Spatialite
+Upgrade pip:
+```shell
+$ pip install -U pip
+```
 
+Run the command to install the env requirements:
+```shell
+$ pip install -r requirements.txt
+```
+
+### Install Spatialite suport.
+
+Ubuntu.
 ```shell
 $ sudo apt-get install libsqlite3-mod-spatialite
 ```
 
+Fedora.
+```shell
+$ sudo dnf install libspatialite
+```
+
 ### Install GDAL development libraries:
 
-Go to the root directory of this project locate gdal.sh and execute it with sudoer permission.
-
+Ubuntu.
 ```shell
 sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt-get update
-sudo apt-get install libgdal-dev
-sudo apt-get install python3-dev
-sudo apt-get install gdal-bin python3-gdal
+sudo apt-get install libgdal-dev gdal-bin
+```
+
+Fedora.
+```shell
+$ sudo dnf install gdal-devel gdal
+```
+
+Install GDAL libary:
+```shell
 pip install GDAL==$(gdal-config --version) --global-option=build_ext --global-option="-I/usr/include/gdal"
 ```
 
+### Running Django setup:
+
 Run the migrations:
 ```shell
-$ python3 manage.py makemigrations 
-$ python3 manage.py migrate
+$ python manage.py migrate
 ```
 
 Create your Django User:

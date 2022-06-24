@@ -7,3 +7,9 @@
 /farm_front/servers
 /farm_front/build/settings.json
 /farm_front/dist
+
+
+*.pyc
+*.pyo
+
+pyenv/
