@@ -101,7 +101,6 @@ Look the django-admin accessing *http://localhost:8000/admin* and use your super
 
 2. Add restrictions so that it is not possible to create farms:
     * Without owner
-    * Without geometry
     * Without municipality
     * Without state
     * Without name
