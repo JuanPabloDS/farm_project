@@ -16,11 +16,11 @@ class OwnerAdmin(admin.ModelAdmin):
 
 
 class FarmAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name',
+    list_display = ['id', 'name', 'owner',
                     'creation_date', 'last_modification_date',
                     'is_active']
     list_filter = ['creation_date', 'last_modification_date', 'is_active']
-    search_fields = ['name', '=id']
+    search_fields = [ 'owner__name', 'owner__document', 'name', 'municipality', 'state', '=id']
 
     readonly_fields = ["centroid", "area"]
 
